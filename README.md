@@ -1,8 +1,8 @@
-# Phân tích Không gian và Quản lý CSDL với PostgreSQL & PostGIS
+# Phân tích Không gian và Quản trị CSDL với PostgreSQL & PostGIS
 
 ## 📌 Giới thiệu Dự án
 
-Dự án này tập trung vào việc quản lý cơ sở dữ liệu không gian (Spatial Database Administration) và xây dựng các câu lệnh truy vấn **Spatial SQL** sử dụng **PostgreSQL** và extension **PostGIS**. 
+Dự án này tập trung vào việc quản trị cơ sở dữ liệu không gian (Spatial Database Administration) và xây dựng các câu lệnh truy vấn **Spatial SQL** sử dụng **PostgreSQL** và extension **PostGIS**. 
 
 Mục tiêu chính của dự án là tự động hóa các phép tính hình học không gian phức tạp (tạo vùng đệm 50m hành lang giao thông, giao cắt không gian, chuyển đổi hệ tọa độ phẳng và tổng hợp diện tích bị ảnh hưởng theo từng Xã/Phường) trực tiếp trên cơ sở dữ liệu, đồng thời chuyển đổi kết quả thành một **Spatial View** để trực quan hóa trên **QGIS**.
 
@@ -25,16 +25,16 @@ postgis_spatial_analysis/
 
 ---
 
-## ⚙️ Thiết lập Cơ sở dữ liệu Không gian (Spatial DB Setup)
+## ⚙️ Thiết lập Cơ sở dữ liệu Không gian
 
-1. **Khởi tạo Database & Kích hoạt PostGIS Extension:**
+1. **Khởi tạo Database & Kích hoạt PostGIS Extension trong pgAdmin4:**
    ```sql
    CREATE DATABASE hcm_spatial_db;
    \c hcm_spatial_db;
    CREATE EXTENSION postgis;
    ```
 
-2. **Nạp dữ liệu không gian (Data Ingestion):**
+2. **Nạp dữ liệu không gian:**
    * Sử dụng công cụ **QGIS DB Manager** trong QGIS để import các tập tin dữ liệu vector chính vào PostgreSQL/PostGIS dưới hệ tọa độ địa lý WGS 84 (`EPSG:4326`):
      * Bảng `xa_phuong`: Ranh giới hành chính cấp Xã/Phường TP.HCM (từ file RanhGioi_Xa&Phuong_HCM.gpkg)
      * Bảng `giao_thong_chinh`: Mạng lưới đường giao thông chính TP.HCM (từ file GiaoThongChinh_HCM.gpkg).
