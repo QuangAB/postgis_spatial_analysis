@@ -2,9 +2,9 @@
 
 ## 📌 Giới thiệu Dự án
 
-Dự án này tập trung vào việc quản trị cơ sở dữ liệu không gian (Spatial Database Administration) và xây dựng các câu lệnh truy vấn **Spatial SQL** sử dụng **PostgreSQL** và extension **PostGIS**. 
+Dự án này tập trung vào việc quản trị cơ sở dữ liệu không gian (Spatial Database Administration) và xây dựng các câu lệnh truy vấn **Spatial SQL** sử dụng **PostgreSQL** và extension **PostGIS** tại khu vực Thành phố Hồ Chí Minh. 
 
-Mục tiêu chính của dự án là tự động hóa các phép tính hình học không gian phức tạp (tạo vùng đệm 50m hành lang giao thông, giao cắt không gian, chuyển đổi hệ tọa độ phẳng và tổng hợp diện tích bị ảnh hưởng theo từng Xã/Phường) trực tiếp trên cơ sở dữ liệu, đồng thời chuyển đổi kết quả thành một **Spatial View** để trực quan hóa trên **QGIS**.
+Mục tiêu chính của dự án là thực hiện truy vấn và các phép tính hình học không gian phức tạp (Buffer, Spatial Intersection, Reproject và tổng hợp diện tích bị ảnh hưởng theo từng Xã/Phường) trực tiếp trên cơ sở dữ liệu, đồng thời chuyển đổi kết quả thành một **Spatial View** để trực quan hóa trên **QGIS**.
 
 ---
 
