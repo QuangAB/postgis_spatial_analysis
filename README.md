@@ -8,6 +8,12 @@ Mục tiêu chính của dự án là thực hiện truy vấn và các phép t�
 
 ---
 
+## 📊 Dữ liệu đầu vào
+* Bảng `xa_phuong`: Ranh giới hành chính cấp Xã/Phường TP.HCM (từ file RanhGioi_Xa&Phuong_HCM.gpkg)
+* Bảng `giao_thong_chinh`: Mạng lưới đường giao thông chính TP.HCM (từ file GiaoThongChinh_HCM.gpkg).
+
+---
+
 ## 🗂️ Cấu trúc Thư mục và Cơ sở dữ liệu
 
 ```
@@ -104,7 +110,7 @@ Sau khi thực thi truy vấn Spatial SQL trong PostgreSQL/PostGIS, hệ thống
 ### 1. Bảng Top 10 Xã/Phường có diện tích hành lang giao thông bị ảnh hưởng lớn nhất:
 
 | STT | Tên Xã / Phường (`ten_xa_phuong`) | Số tuyến đường tác động (`so_tuyen_duong_tac_dong`) | Tổng diện tích ảnh hưởng ($m^2$) (`tong_dien_tich_anh_huong_m2`) |
-| :---: | :--- | :---: | :---: |
+| :---: | :---: | :---: | :---: |
 | **1** | An Phú | 383 | **8,348,350.96** |
 | **2** | Tân Phú | 505 | **7,495,647.61** |
 | **3** | Phường 13 | 464 | **5,457,319.03** |
